@@ -29,7 +29,7 @@ shawshank_redemption = media.Movie("The Shawshank Redemtion",
                                    "http://ia.media-imdb.com/images/M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_SX214_AL_.jpg",
                                    "https://www.youtube.com/watch?v=6hB3S9bIaco");
 
-movies= [toy_story, princess_mononoke, con_air, shawshank_redemption]
+# Contains all instances of Movie that will be displayed on the page
+movies = [toy_story, princess_mononoke, con_air, shawshank_redemption]
 
 fresh_tomatoes.open_movies_page(movies)
-print(media.Movie.__doc__)

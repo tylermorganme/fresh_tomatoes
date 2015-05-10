@@ -71,8 +71,8 @@ main_page_head = '''
         .img-area:hover .storyline-area p{
             transform: translate3d(0,0,0);
         }
-        .storyline-area>p{
-            margin: 0; 
+        .storyline-area>p {
+            margin: 0;
         }
         .scale-media {
             padding-bottom: 56.25%;
@@ -133,7 +133,7 @@ main_page_content = '''
         </div>
       </div>
     </div>
-    
+   
     <!-- Main Page Content -->
     <div class="container">
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -199,4 +199,4 @@ def open_movies_page(movies):
 
   # open the output file in the browser
   url = os.path.abspath(output_file.name)
-  webbrowser.open('file://' + url, new=2) # open in a new tab, if possible
+  webbrowser.open('file://' + url, new=2)  # open in a new tab, if possible
