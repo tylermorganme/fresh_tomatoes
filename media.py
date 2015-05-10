@@ -3,13 +3,7 @@ import webbrowser
 class Movie():
     """This class stores data for movies"""
     
-    def __init__(self,
-                 movie_title,
-                 movie_storyline,
-                 movie_rating,
-                 movie_director,
-                 poster_image,
-                 trailer_youtube_url):
+    def __init__(self, movie_title, movie_storyline, movie_rating, movie_director, poster_image, trailer_youtube_url):
         self.title = movie_title
         self.storyline = movie_storyline
         self.rating = movie_rating

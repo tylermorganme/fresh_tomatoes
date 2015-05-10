@@ -31,9 +31,43 @@
             margin-bottom: 20px;
             padding-top: 20px;
         }
+        .img-area {
+            width: 240px;
+            height: 342px;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+        }
+        .storyline-area {
+            dispaly: block;
+            position: absolute;
+            padding: 10px;
+            margin: 0;
+            bottom: 0;
+            top: auto;
+            left: 0;
+            width: 100%;
+            color: white;
+            background: rgb(000,0,0);
+            background: rgba(0,0,0,0.75);
+            text-align: center;
+        }
+        .storyline-area, .storyline-area p{
+            transform: translate3d(0,100%,0);
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+        }
         .movie-tile:hover {
-            background-color: #EEE;
             cursor: pointer;
+        }
+        .img-area:hover .storyline-area{
+            transform: translate3d(0,0,0);
+        }
+        .img-area:hover .storyline-area p{
+            transform: translate3d(0,0,0);
+        }
+        .storyline-area>p{
+            margin: 0; 
         }
         .scale-media {
             padding-bottom: 56.25%;
@@ -105,28 +139,48 @@
     <div class="container">
       
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="KYz2wyBy3kc" data-toggle="modal" data-target="#trailer">
-    <img src="http://upload.wikimedia.org/wikipedia/en/1/13/Toy_Story.jpg" width="220" height="342">
+    <div class="img-area text-center">
+      <img src="http://upload.wikimedia.org/wikipedia/en/1/13/Toy_Story.jpg" alt="Toy Story poster" width="100%" height="100%">
+      <div class="storyline-area">
+        <p>A movie about toys coming to life</p>
+      </div>
+    </div>
     <h2>Toy Story</h2>
     <p>Rated: G</p>
     <p>Directed By: John Lasseter</p>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="4OiMOHRDs14" data-toggle="modal" data-target="#trailer">
-    <img src="http://ia.media-imdb.com/images/M/MV5BMjgzNTUwODQzN15BMl5BanBnXkFtZTcwMTc4ODE3OQ@@._V1_SX214_AL_.jpg" width="220" height="342">
+    <div class="img-area text-center">
+      <img src="http://ia.media-imdb.com/images/M/MV5BMjgzNTUwODQzN15BMl5BanBnXkFtZTcwMTc4ODE3OQ@@._V1_SX214_AL_.jpg" alt="Princess Mononoke poster" width="100%" height="100%">
+      <div class="storyline-area">
+        <p>A young man and a feral woman must save the world.</p>
+      </div>
+    </div>
     <h2>Princess Mononoke</h2>
     <p>Rated: PG-13</p>
     <p>Directed By: Hayao Miyazaki</p>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="fWq-S1_1vnc" data-toggle="modal" data-target="#trailer">
-    <img src="http://ia.media-imdb.com/images/M/MV5BMTU1NzY2NjIzNV5BMl5BanBnXkFtZTgwMzE2Mzk5MDE@._V1_SY317_CR0,0,214,317_AL_.jpg" width="220" height="342">
+    <div class="img-area text-center">
+      <img src="http://ia.media-imdb.com/images/M/MV5BMTU1NzY2NjIzNV5BMl5BanBnXkFtZTgwMzE2Mzk5MDE@._V1_SY317_CR0,0,214,317_AL_.jpg" alt="Con Air poster" width="100%" height="100%">
+      <div class="storyline-area">
+        <p>After a violent highjacking, a convict must help the police.</p>
+      </div>
+    </div>
     <h2>Con Air</h2>
     <p>Rated: R</p>
     <p>Directed By: Simon West</p>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="6hB3S9bIaco" data-toggle="modal" data-target="#trailer">
-    <img src="http://ia.media-imdb.com/images/M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_SX214_AL_.jpg" width="220" height="342">
+    <div class="img-area text-center">
+      <img src="http://ia.media-imdb.com/images/M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_SX214_AL_.jpg" alt="The Shawshank Redemtion poster" width="100%" height="100%">
+      <div class="storyline-area">
+        <p>Life in prison isn't all it's cracked up to be.</p>
+      </div>
+    </div>
     <h2>The Shawshank Redemtion</h2>
     <p>Rated: R</p>
     <p>Directed By: Frank Darabont</p>

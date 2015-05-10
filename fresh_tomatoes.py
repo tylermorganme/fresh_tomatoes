@@ -36,9 +36,43 @@ main_page_head = '''
             margin-bottom: 20px;
             padding-top: 20px;
         }
+        .img-area {
+            width: 240px;
+            height: 342px;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+        }
+        .storyline-area {
+            dispaly: block;
+            position: absolute;
+            padding: 10px;
+            margin: 0;
+            bottom: 0;
+            top: auto;
+            left: 0;
+            width: 100%;
+            color: white;
+            background: rgb(000,0,0);
+            background: rgba(0,0,0,0.75);
+            text-align: center;
+        }
+        .storyline-area, .storyline-area p{
+            transform: translate3d(0,100%,0);
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+        }
         .movie-tile:hover {
-            background-color: #EEE;
             cursor: pointer;
+        }
+        .img-area:hover .storyline-area{
+            transform: translate3d(0,0,0);
+        }
+        .img-area:hover .storyline-area p{
+            transform: translate3d(0,0,0);
+        }
+        .storyline-area>p{
+            margin: 0; 
         }
         .scale-media {
             padding-bottom: 56.25%;
@@ -120,7 +154,12 @@ main_page_content = '''
 # A single movie entry html template
 movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
-    <img src="{poster_image_url}" width="220" height="342">
+    <div class="img-area text-center">
+      <img src="{poster_image_url}" alt="{movie_title} poster" width="100%" height="100%">
+      <div class="storyline-area">
+        <p>{movie_storyline}</p>
+      </div>
+    </div>
     <h2>{movie_title}</h2>
     <p>Rated: {movie_rating}</p>
     <p>Directed By: {movie_director}</p>
@@ -142,7 +181,8 @@ def create_movie_tiles_content(movies):
             poster_image_url=movie.poster_image_url,
             trailer_youtube_id=trailer_youtube_id,
             movie_rating=movie.rating,
-            movie_director=movie.director
+            movie_director=movie.director,
+            movie_storyline=movie.storyline
         )
     return content
 
