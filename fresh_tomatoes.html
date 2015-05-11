@@ -30,6 +30,8 @@
         .movie-tile {
             margin-bottom: 20px;
             padding-top: 20px;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
         }
         .img-area {
             width: 240px;
@@ -53,21 +55,25 @@
             text-align: center;
         }
         .storyline-area, .storyline-area p{
+            -webkit-transform: -webkit-translate3d(0,100%,0);
             transform: translate3d(0,100%,0);
             -webkit-transition: 0.5s;
             transition: 0.5s;
         }
         .movie-tile:hover {
             cursor: pointer;
+            background-color: #dddddd;
         }
         .img-area:hover .storyline-area{
+            -webkit-transform: -webkit-translate3d(0,0,0);
             transform: translate3d(0,0,0);
         }
         .img-area:hover .storyline-area p{
+            -webkit-transform: -webkit-translate3d(0,0,0);
             transform: translate3d(0,0,0);
         }
-        .storyline-area>p{
-            margin: 0; 
+        .storyline-area>p {
+            margin: 0;
         }
         .scale-media {
             padding-bottom: 56.25%;
@@ -125,7 +131,7 @@
         </div>
       </div>
     </div>
-    
+   
     <!-- Main Page Content -->
     <div class="container">
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -142,7 +148,7 @@
     <div class="img-area text-center">
       <img src="http://upload.wikimedia.org/wikipedia/en/1/13/Toy_Story.jpg" alt="Toy Story poster" width="100%" height="100%">
       <div class="storyline-area">
-        <p>A movie about toys coming to life</p>
+        <p>A movie about toys coming to life.</p>
       </div>
     </div>
     <h2>Toy Story</h2>

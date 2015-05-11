@@ -2,7 +2,7 @@
 
 ##Introduction
 
-This app was built as Porject 1 for the Full Stack Web Development Nanodegreee at Udacity. It displays information about movies and allows you to view their trailers.
+This app was built as Project 1 for the Full Stack Web Development Nanodegree at Udacity. It displays information about movies and allows you to view their trailers.
 
 ##Instructions
 

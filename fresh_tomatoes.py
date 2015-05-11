@@ -35,6 +35,8 @@ main_page_head = '''
         .movie-tile {
             margin-bottom: 20px;
             padding-top: 20px;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
         }
         .img-area {
             width: 240px;
@@ -58,17 +60,21 @@ main_page_head = '''
             text-align: center;
         }
         .storyline-area, .storyline-area p{
+            -webkit-transform: -webkit-translate3d(0,100%,0);
             transform: translate3d(0,100%,0);
             -webkit-transition: 0.5s;
             transition: 0.5s;
         }
         .movie-tile:hover {
             cursor: pointer;
+            background-color: #dddddd;
         }
         .img-area:hover .storyline-area{
+            -webkit-transform: -webkit-translate3d(0,0,0);
             transform: translate3d(0,0,0);
         }
         .img-area:hover .storyline-area p{
+            -webkit-transform: -webkit-translate3d(0,0,0);
             transform: translate3d(0,0,0);
         }
         .storyline-area>p {

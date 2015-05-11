@@ -2,7 +2,7 @@ import fresh_tomatoes
 import media
 
 toy_story = media.Movie("Toy Story",
-                        "A movie about toys coming to life",
+                        "A movie about toys coming to life.",
                         "G",
                         "John Lasseter",
                         "http://upload.wikimedia.org/wikipedia/en/1/13/Toy_Story.jpg",
